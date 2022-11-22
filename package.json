@@ -1,0 +1,24 @@
+{
+  "name": "sd-0x-store-manager",
+  "version": "1.0.0",
+  "description": "Simple CRUD to sales and products",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test:mocha": "nyc --all --include src/models --include src/services --include src/controllers mocha tests/unit/**/*.js --exit",
+    "debug": "nodemon --ignore coverage --inspect=0.0.0.0:9229 src/server.js"
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mocha": "^10.1.0",
+    "mysql2": "^2.3.3",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.2"
+  }
+}
